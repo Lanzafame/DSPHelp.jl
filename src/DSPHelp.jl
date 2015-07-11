@@ -8,6 +8,6 @@ end
 function od(x::Array{Float64,2})
   return (x - fliplr(x))/2
 end 
-# package code goes here
+
 
 end # module
