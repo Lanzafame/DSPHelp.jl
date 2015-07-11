@@ -5,6 +5,6 @@ x = [0.931056  -0.983596  -0.656435  0.400086  -0.778839  -0.0867077  0.121221  
 evx = [0.583755  -1.78553  -0.267607  0.156689  -0.778839  0.156689  -0.267607  -1.78553  0.583755]
 odx = [0.347301  0.80193  -0.388828  0.243397  0.0  -0.243397  0.388828  -0.80193  -0.347301]
 
-@test_approx_eq ev(x) evx
-@test_approx_eq od(x) odx
-@test_approx_eq (ev(x) + od(x)) x
+@test_approx_eq_eps ev(x) evx 1e-5
+@test_approx_eq_eps od(x) odx 1e-5
+@test_approx_eq_eps (ev(x) + od(x)) x 1e-5
